@@ -1,0 +1,26 @@
+ESTRUCTURA 
+
+DDL
+
+  CREAR
+    CREATE DATABASE
+    CREATE TABLE
+  
+  BORRAR
+    DROP DATABASE
+  
+  SELECCIONAR
+      USE
+
+
+DML
+
+  INSERTAR DATOS
+    INSERT
+
+TIPOS DE DATOS
+  CHAR - fijo
+  VARCHAR - dinámico
+  INT - entero
+  DOUBLE - decimal
+  
