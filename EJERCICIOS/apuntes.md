@@ -36,4 +36,4 @@ CONSULTA
   MUESTRA
   SELECT
 
-https://www.db-fiddle.com/f/hYPwdLhEd4nzBqXXq68Ava/4
+https://www.db-fiddle.com/f/hYPwdLhEd4nzBqXXq68Ava/5
