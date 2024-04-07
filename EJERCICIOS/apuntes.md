@@ -29,4 +29,11 @@ TIPOS DE DATOS
   VARCHAR - dinámico
   INT - entero
   DOUBLE - decimal
+
+DQL
+CONSULTA
+
+  MUESTRA
+  SELECT
+
   
