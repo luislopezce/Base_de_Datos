@@ -1,0 +1,64 @@
+CREATE DATABASE escuela;
+
+USE escuela;
+
+CREATE TABLE usuario(
+	folio_usuario CHAR(4) PRIMARY KEY,
+    nombre_usuario VARCHAR(5) NOT NULL
+);
+
+CREATE TABLE taller(
+	codigo_taller CHAR(4) PRIMARY KEY,
+    nombre_taller VARCHAR(5) NOT NULL
+);
+
+CREATE TABLE grupo(
+	folio_usuario1 CHAR(4),
+    codigo_taller1 CHAR(4),
+    FOREIGN KEY (folio_usuario1) REFERENCES usuario(folio_usuario),
+    FOREIGN KEY (codigo_taller1) REFERENCES taller(codigo_taller)
+);
+
+ALTER TABLE usuario
+ADD apellido_paterno_usuario VARCHAR(10);
+
+ALTER TABLE usuario
+ADD telefono_usuario CHAR(10);
+
+ALTER TABLE usuario
+ADD correo_usuario VARCHAR(10);
+
+ALTER TABLE taller
+ADD duracion_taller INT;
+
+CREATE TABLE tallerista(
+	folio_tallerista CHAR(4) PRIMARY KEY,
+    nombre_tallerista VARCHAR(10),
+    apellido_paterno_tallerista VARCHAR(10),
+    telefono_tallerista CHAR(10),
+    correo_tallerista VARCHAR(10),
+    codigo_taller2 CHAR(4),
+    FOREIGN KEY (codigo_taller2) REFERENCES taller (codigo_taller)      
+);
+
+ALTER TABLE grupo
+ADD codigo_grupo CHAR(4);
+
+ALTER TABLE grupo
+ADD horario_grupo VARCHAR(5);
+
+ALTER TABLE usuario
+CHANGE nombre_usuario nombre_usuario VARCHAR(10);
+
+
+INSERT INTO usuario VALUES('US01', 'Jhoana', 'Arroyo', '5555555551', 'jhoana@correo.com');
+INSERT INTO usuario VALUES('US02', 'Tavata', 'Villalva', '5555555552', 'tavata@correo.com');
+INSERT INTO usuario VALUES('US03', 'Joselin', 'Martinez', '5555555553', 'joselin@correo.com');
+INSERT INTO usuario VALUES('US04', 'Laura', 'Cervantes', '5555555554', 'laura@correo.com');
+INSERT INTO usuario VALUES('US05', 'Yannin', 'Aguayo', '5555555555', 'yannin@correo.com');
+
+
+ALTER TABLE usuario
+CHANGE correo_usuario correo_usuario VARCHAR(25);
+
+SELECT * FROM usuario
