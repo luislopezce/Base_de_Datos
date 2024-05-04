@@ -62,3 +62,8 @@ ALTER TABLE usuario
 CHANGE correo_usuario correo_usuario VARCHAR(25);
 
 SELECT * FROM usuario
+
+
+
+
+https://www.db-fiddle.com/f/2KvXdUa4xkErpj8dHwMHgk/2
